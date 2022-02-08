@@ -33,3 +33,11 @@ MainsailOS-slipway/emulation - Contains dependencies for emulation testing\
 MainsailOS-slipway/src/image - Put your Image Zip file here
 
 ---
+
+## Ports
+
+To not interfere with local ports I decided to choose different then standard
+
+Mainsail listen on port 8080\
+SSH Daemon on Port 2222\
+unfortunatly moonraker has to stay at its default port 7125.
