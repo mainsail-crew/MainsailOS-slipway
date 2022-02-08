@@ -29,7 +29,7 @@ make run
 
 ## Build layout
 
-MainsailOS-slipway/emulation - Contains dependencies for emulation testing
-MainsailOS-slipway/src/image - Put your Image here
+MainsailOS-slipway/emulation - Contains dependencies for emulation testing\
+MainsailOS-slipway/src/image - Put your Image Zip file here
 
 ---
