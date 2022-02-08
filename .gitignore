@@ -1,0 +1,13 @@
+# MainsailOS-slipway
+#
+# An easy way to run an MainsailOS Image for developing
+# on a local machine without need for Bare Metal
+#
+# Copyright 2022 Stephan Wendel <me@stephanwe.de>
+#
+# This file may distributed under GPL v3
+
+# Ignore Images
+image/*.zip
+image/*.img
+image/*.sha256

@@ -1,0 +1,24 @@
+# MainsailOS-slipway
+#
+# An easy way to run an MainsailOS Image for developing
+# on a local mashine without need for Bare Metal
+#
+# Copyright 2022 Stephan Wendel <me@stephanwe.de>
+#
+# This file may distributed under GPL v3
+
+version: "3.9"
+
+services:
+    slipway:
+        image: mainsailos-slipway
+        container_name: captain_mete
+        build:
+          context: ./docker
+        tty: true
+        volumes:
+            - ./image:/home/slipway/zipfile
+        ports:
+          - "2222:2222"
+          - "7125:7125"
+          - "8080:8080"

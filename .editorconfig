@@ -1,0 +1,37 @@
+# MainsailOS-slipway
+#
+# An easy way to run an MainsailOS Image for developing
+# on a local mashine without need for Bare Metal
+#
+# Copyright 2022 Stephan Wendel <me@stephanwe.de>
+#
+# This file may distributed under GPL v3
+
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.sh]
+# According to Linux Kernel line lenght.
+# Try to stay at max lenght of 80 characters
+max_line_length = 100
+
+[*.{md,markdown}]
+insert_final_newline = true
+trim_trailing_whitespace = false
+
+[{Makefile,**.mk}]
+indent_style = tab
+
+[*.{json,yml,yaml}]
+indent_style = space
+indent_size = 2
