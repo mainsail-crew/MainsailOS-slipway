@@ -1,7 +1,7 @@
 ![downloads](https://img.shields.io/github/downloads/mainsail-crew/MainsailOS/total)
 [![discord](https://img.shields.io/discord/758059413700345988?color=%235865F2&label=discord&logo=discord&logoColor=white&style=flat)](https://discord.gg/skWTwTD)
 
-# MainsailOS Unit Test
+# MainsailOS Slipway - Test your Image withot Bare Metal
 
 ![Mainsail Logo](https://github.com/meteyou/mainsail/raw/master/docs/assets/img/logo.png?raw=true)
 
@@ -20,8 +20,8 @@ A [Raspberry Pi OS](https://www.raspberrypi.org/software/) based distribution fo
 ## Test on an Image of MainsailOS
 
 ```bash
-git clone https://github.com/mainsail-crew/MainsailOS-unittest.git
-cd MainsailOS-unittest/
+git clone https://github.com/mainsail-crew/MainsailOS-slipway.git
+cd MainsailOS-slipway/
 make run
 ```
 
@@ -29,7 +29,7 @@ make run
 
 ## Build layout
 
-MainsailOS-unittest/emulation - Contains dependencies for emulation testing
-MainsailOS-unittest/src/image - Put your Image here
+MainsailOS-slipway/emulation - Contains dependencies for emulation testing
+MainsailOS-slipway/src/image - Put your Image here
 
 ---
