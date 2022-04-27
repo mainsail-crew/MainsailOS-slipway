@@ -10,15 +10,16 @@
 version: "3.9"
 
 services:
-    slipway:
-        image: mainsailos-slipway
-        container_name: captain_mete
-        build:
-          context: ./docker
-        tty: true
-        volumes:
-            - ./image:/home/slipway/zipfile
-        ports:
-          - "2222:2222"
-          - "7125:7125"
-          - "8080:8080"
+  slipway:
+    image: mainsailos-slipway
+    container_name: captain_mete
+    build:
+      context: ./docker
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./image:/home/slipway/img_file
+    ports:
+      - "2222:2222"
+      - "7125:7125"
+      - "8080:8080"

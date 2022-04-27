@@ -24,7 +24,7 @@ COPY --chown=root:root ./entrypoint.sh /bin/
 # copy emulation kernels and dtb
 COPY --chown=${SW_USER}:${SW_USER} ./emulation /home/${SW_USER}/emulation/
 # create mount point
-VOLUME /home/${SW_USER}/zipfile
+VOLUME /home/${SW_USER}/img_file
 
 
 # run container as unprivileged user
@@ -37,4 +37,4 @@ EXPOSE 2222
 EXPOSE 8080
 
 # entypoint
-CMD [ "entrypoint.sh" ]
+CMD [ "/bin/entrypoint.sh" ]

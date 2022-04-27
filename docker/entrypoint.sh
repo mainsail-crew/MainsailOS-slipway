@@ -53,6 +53,33 @@ get_img() {
     fi
 }
 
+get_img() {
+    if [ -n "$(find "${HOME}/img_file" -name "*.zip")" ] ;then
+        img_file="$(find "${HOME}/img_file" -name "*.zip")"
+        ok_msg "Found file: $(basename "${img_file}") ..."
+        ok_msg "Unzip to ${IMAGE_PATH} ..."
+        unzip "${_get_img_file}" -d "${IMAGE_PATH}"
+
+    elif [ -n "$(find "${HOME}/img_file" -name "*.xz")" ] ;then
+        img_file="$(find "${HOME}/img_file" -name "*.xz")"
+        ok_msg "Found File: $(basename "${img_file}") ..."
+        ok_msg "Unzip to ${IMAGE_PATH} ..."
+        cp "${img_file}" "${IMAGE_PATH}/"
+        cd "${IMAGE_PATH}"
+        xz -devT"$(nproc)" "${img_file}"
+
+    elif [ -n "$(find "${HOME}/img_file" -name "*.img")" ] ;then
+        img_file="$(find "${HOME}/img_file" -name "*.img")"
+        ok_msg "Found File: $(basename "${img_file}") ..."
+        ok_msg "Copy to ${IMAGE_PATH} ..."
+        cp "${img_file}" "${IMAGE_PATH}/"
+
+    else
+        fail_msg "No Image file found ... [EXITING]"
+        exit 1
+    fi
+}
+
 check_qemu() {
     if command -v "${QEMU_BIN}" > /dev/null 2>&1 ; then
         ok_msg "${QEMU_BIN} found ..."

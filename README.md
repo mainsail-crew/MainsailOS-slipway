@@ -1,7 +1,7 @@
 ![downloads](https://img.shields.io/github/downloads/mainsail-crew/MainsailOS/total)
 [![discord](https://img.shields.io/discord/758059413700345988?color=%235865F2&label=discord&logo=discord&logoColor=white&style=flat)](https://discord.gg/skWTwTD)
 
-# MainsailOS Slipway - Test your Image withot Bare Metal
+# MainsailOS Slipway - Test your Image without Bare Metal
 
 ![Mainsail Logo](https://github.com/meteyou/mainsail/raw/master/docs/assets/img/logo.png?raw=true)
 
@@ -30,7 +30,7 @@ make run
 ## Build layout
 
 MainsailOS-slipway/emulation - Contains dependencies for emulation testing\
-MainsailOS-slipway/src/image - Put your Image Zip file here
+MainsailOS-slipway/src/image - Put your Image file here
 
 ---
 
