@@ -42,23 +42,11 @@ warn_msg() {
 
 # check for zip and unzip if exist
 get_img() {
-    _get_img_file=$(find "${HOME}/zipfile" -name "*.zip")
-    if [ -n "${_get_img_file}" ] ;then
-        ok_msg "Found Zipfile: $(basename "${_get_img_file}") ..."
-        ok_msg "Unzip to ${IMAGE_PATH} ..."
-        unzip "${_get_img_file}" -d "${IMAGE_PATH}"
-    else
-        fail_msg "No Zipfile found ... [EXITING]"
-        exit 1
-    fi
-}
-
-get_img() {
     if [ -n "$(find "${HOME}/img_file" -name "*.zip")" ] ;then
         img_file="$(find "${HOME}/img_file" -name "*.zip")"
         ok_msg "Found file: $(basename "${img_file}") ..."
         ok_msg "Unzip to ${IMAGE_PATH} ..."
-        unzip "${_get_img_file}" -d "${IMAGE_PATH}"
+        unzip "${img_file}" -d "${IMAGE_PATH}"
 
     elif [ -n "$(find "${HOME}/img_file" -name "*.xz")" ] ;then
         img_file="$(find "${HOME}/img_file" -name "*.xz")"
